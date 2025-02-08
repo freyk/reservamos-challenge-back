@@ -37,7 +37,7 @@ export class WeatherService {
         }),
       );
 
-      await this.cacheManager.set(cacheKey, response.data, 3600);
+      await this.cacheManager.set(cacheKey, response.data);
       console.log(`🌍 External API call for: ${cacheKey}`);
 
       return response.data as Weather;

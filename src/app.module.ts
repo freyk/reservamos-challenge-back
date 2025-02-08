@@ -18,8 +18,6 @@ import { AppService } from './app.service';
   imports: [
     HttpModule,
     CacheModule.register<CacheModuleOptions>({
-      ttl: 3600, // 1 hour of cache
-      max: 100, // Max 100 items in cache,
       isGlobal: true,
     }),
     PlacesModule,

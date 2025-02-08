@@ -87,7 +87,7 @@ export class AppService {
         }),
       );
 
-      await this.cacheManager.set(cacheKey, citiesWithWeather, 3600); // Cache por 1 hora
+      await this.cacheManager.set(cacheKey, citiesWithWeather);
       console.log(`🌍 External API call for: ${cacheKey}`);
 
       return citiesWithWeather;
